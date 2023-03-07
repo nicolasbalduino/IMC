@@ -1,6 +1,10 @@
 ﻿float altura, peso, imc;
 char sexo;
 
+void CalcularIMC(){
+    imc = peso / (altura * altura);
+}
+
 Console.WriteLine("Informe a sua altura: ");
 altura = float.Parse(Console.ReadLine());
 
@@ -10,7 +14,7 @@ peso = float.Parse(Console.ReadLine());
 Console.WriteLine("Informe o seu sexo: ");
 sexo = char.Parse(Console.ReadLine().ToUpper());
 
-imc = peso / (altura * altura);
+CalcularIMC();
 
 if (sexo == 'M')
 {
